@@ -1,0 +1,51 @@
+* Data Analysis
+
+* import pandas as pd
+* pd.DataFrame(sequence)
+* pd.DateFrame(sequence,columns=['col1','col2'])
+* df['column].unique() or df.column.unique()
+* df.rename(columns={'old':'new','old2':'new2'},inplace=True)
+* df['column'].sum()
+* pd.pivot_table(df,index='column',values='column',aggfunc='sum')
+* df.pivot_table(index='Timestamp',values='Value',columns='name')
+* df.drop_duplictes(subset=['column1',column2],keep='last/first/false')
+* pd.DatetimeIndex(df['column']).month,day,weekday,hour
+* df['hour'] = df['TimeStamp'].apply(lambda x: x.hour)
+* df['month'] = df.TimeStamp.apply(lambda x: x.month)
+* df['column'].astype(str)
+* df.merge(df_t,on='column',how='left,inner,outer')
+* df.reset_index()
+* df.set_index(column)
+* df['JF'].groupby(df['DE']).describe().reset_index()
+* df.sort_values('column',ascending=False)
+* index,row in df.iterrows()
+* df['column'][0]
+* df['column'].isin(list)
+* pd.read_csv(path)
+* df.to_csv(path,index=False)
+* pd.read_pickle(path)
+* df.to_pickle(file_name)
+* pd.to_datetime('datetime')
+* df[['col1','col2','clo3','col3']]
+* df[df['column']==value]
+* df['Timestamp'].max()
+* df.head(number)
+* df.tail(number)
+* del df[name]
+* df = df.drop('column_name', 1)  #where 1 is the axis number (0 for rows and 1 for columns.)
+* df.drop(['wastebinid'], axis=1).values
+* df.columns
+* df[column].values
+* df.index
+* df[['name','lat','lon']].values.tolist()  # [[1,23,2],[1,2,3]]
+* df.to_json(orient='records')
+* df.iloc[::-1]
+* df.columns=['DE','JF']
+* df['DE'][df['QD'] == '+']
+* df.fillna(0)
+* df['column']=df['column'].apply(lambda x: x.strftime('%Y-%m-%d %H:00:00'))
+* pd.date_range(start=str(ptime)+' 00:00:00', end=str(ctime)+' 23:00:00', freq='H')
+* pd.date_range(start=str(start), end=str(end), freq='D')
+* df.shape
+* df.reshape()
+* df.dtypes
